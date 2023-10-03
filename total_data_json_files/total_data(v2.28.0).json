@@ -1,0 +1,874 @@
+{
+    "tests": {
+        "test_utils.py": {
+            "Levels": {
+                "A1": 291,
+                "B1": 36,
+                "A2": 252,
+                "C1": 1,
+                "B2": 66
+            },
+            "Class": {
+                "Simple List": 15,
+                " Dictionary List": 4,
+                " Nested Tuple": 43,
+                "Simple Tuple": 149,
+                "Simple Dictionary": 29,
+                "Files --> 'write' call function": 4,
+                "Files --> 'read' call function": 2,
+                "Files --> 'open' call function": 1,
+                "Simple Atributte": 158,
+                "Simple Dictionary Comprehension": 1,
+                "Simple Assignment": 41,
+                "'raise' exception": 3,
+                "'assert' exception": 66,
+                "'pass' statement": 3,
+                "Import": 8,
+                "From": 7,
+                "Relative From": 1,
+                "Simple If statements": 8,
+                "With": 9,
+                "Function with Simple argument": 70,
+                "Function": 1,
+                "Return": 7,
+                "Simple Class ": 15,
+                "Simple Class  Using the constructor method --> __init__": 1
+            }
+        },
+        "conftest.py": {
+            "Levels": {
+                "A1": 19,
+                "A2": 32,
+                "B1": 2,
+                "C1": 1
+            },
+            "Class": {
+                "Simple Tuple": 2,
+                "Simple Atributte": 24,
+                "Assigment with sum (total = total +)": 1,
+                "Simple Assignment": 8,
+                "Import": 4,
+                "From": 4,
+                "Exception --> try/except": 1,
+                "Function with Simple argument": 4,
+                "Function with * argument ": 1,
+                "Return": 4,
+                "Generator Function (yield)": 1
+            }
+        },
+        "test_structures.py": {
+            "Levels": {
+                "A1": 28,
+                "A2": 35,
+                "B2": 11,
+                "B1": 2
+            },
+            "Class": {
+                "Simple List": 2,
+                "Simple Tuple": 7,
+                " Nested Tuple": 2,
+                "Simple Dictionary": 2,
+                "Simple Atributte": 29,
+                "Simple Assignment": 7,
+                "'assert' exception": 11,
+                "Import": 1,
+                "From": 1,
+                "Function with Simple argument": 12,
+                "Simple Class ": 2
+            }
+        },
+        "test_packages.py": {
+            "Levels": {
+                "A2": 7,
+                "A1": 3
+            },
+            "Class": {
+                "Simple Atributte": 6,
+                "Import": 1,
+                "Function": 3
+            }
+        },
+        "test_testserver.py": {
+            "Levels": {
+                "A1": 52,
+                "A2": 79,
+                "B1": 17,
+                "B2": 15
+            },
+            "Class": {
+                "Simple Tuple": 10,
+                "'range' call function": 1,
+                "Simple Atributte": 72,
+                "Simple Assignment": 29,
+                "'raise' exception": 1,
+                "'assert' exception": 15,
+                "'pass' statement": 1,
+                "Import": 5,
+                "From": 1,
+                "Simple For Loop": 1,
+                "With": 14,
+                "Function with Simple argument": 12,
+                "Simple Class ": 1
+            }
+        },
+        "compat.py": {
+            "Levels": {
+                "A2": 3,
+                "A1": 3,
+                "B1": 4
+            },
+            "Class": {
+                "Simple Atributte": 1,
+                "Simple Assignment": 1,
+                "Import": 2,
+                "Import with 'as' extension ": 1,
+                "From with 'as' extension ": 1,
+                "Exception --> try/except": 2,
+                "Function with Simple argument": 1,
+                "Return": 1
+            }
+        },
+        "__init__.py": {
+            "Levels": {
+                "A2": 3
+            },
+            "Class": {
+                "Simple Atributte": 1,
+                "Import": 1,
+                "From": 1
+            }
+        },
+        "test_hooks.py": {
+            "Levels": {
+                "A1": 8,
+                "A2": 8,
+                "B1": 2,
+                "B2": 2
+            },
+            "Class": {
+                "Simple List": 2,
+                " Nested Tuple": 1,
+                "Simple Tuple": 2,
+                " List Dictionary": 1,
+                "Simple Dictionary": 1,
+                "Simple Atributte": 4,
+                "'assert' exception": 2,
+                "Import": 1,
+                "From": 1,
+                "Function with Simple argument": 2,
+                "Function": 1,
+                "Lambda": 1,
+                "Return": 1
+            }
+        },
+        "test_requests.py": {
+            "Levels": {
+                "A1": 1098,
+                "A2": 1491,
+                "B1": 118,
+                "C1": 14,
+                "B2": 378
+            },
+            "Class": {
+                "Simple List": 27,
+                "Simple Tuple": 136,
+                " Nested Tuple": 26,
+                "Simple Dictionary": 146,
+                " Nested Dictionary": 3,
+                " List Dictionary": 3,
+                "Print": 3,
+                "Files --> 'read' call function": 9,
+                "Files --> 'open' call function": 11,
+                "'range' call function": 1,
+                "Simple Atributte": 1268,
+                "Simple List Comprehension": 2,
+                "List Comprehension withIf statements": 1,
+                "Generator Expression": 9,
+                "Simple Assignment": 631,
+                "Assigment with sum (total = total +)": 9,
+                "Simplified incremental Assignment with increase amount": 3,
+                "'raise' exception": 2,
+                "'assert' exception": 377,
+                "'pass' statement": 8,
+                "Import": 9,
+                "Import'pickle' module": 1,
+                "Import're' module": 1,
+                "From with 'as' extension ": 2,
+                "From": 13,
+                "Relative From": 2,
+                "Simple If statements": 9,
+                "Simple For Loop": 15,
+                "For Loop with Tuples to iterate": 1,
+                "Exception --> try/except": 8,
+                "Exception --> try/except/else": 2,
+                "Exception --> try/finally": 1,
+                "With": 63,
+                "Function": 1,
+                "Function with Simple argument": 244,
+                "Function with Simple argument with * argument  with ** argument": 2,
+                "Function with Simple argument with ** argument": 2,
+                "Function with * argument  with ** argument": 4,
+                "Function with Simple argument with Default argument": 4,
+                "Lambda": 2,
+                "Return": 23,
+                "Simple Class ": 9,
+                "Inherited Class from SessionRedirectMixin Using the constructor method --> __init__": 1,
+                "Simple Class  Using the constructor method --> __init__": 4,
+                "Inherited Class from MutableMapping Using the constructor method --> __init__": 1
+            }
+        },
+        "utils.py": {
+            "Levels": {
+                "A1": 4,
+                "A2": 12,
+                "B2": 1,
+                "B1": 1,
+                "C1": 1
+            },
+            "Class": {
+                "Simple Tuple": 1,
+                "Simple Atributte": 9,
+                "Simple Assignment": 2,
+                "Import": 2,
+                "Simple If statements": 1,
+                "For Loop with Tuple as name": 1,
+                "Exception --> try/finally": 1,
+                "Function with ** argument": 1,
+                "Generator Function (yield)": 1
+            }
+        },
+        "test_help.py": {
+            "Levels": {
+                "A2": 6,
+                "A1": 5,
+                "B2": 3,
+                "B1": 1
+            },
+            "Class": {
+                "Simple Dictionary": 2,
+                "Simple Atributte": 3,
+                "Simple Assignment": 1,
+                "'assert' exception": 3,
+                "From": 1,
+                "Function": 1,
+                "Function with Simple argument": 3,
+                "Simple Class  Using the constructor method --> __init__": 1
+            }
+        },
+        "test_lowlevel.py": {
+            "Levels": {
+                "A1": 152,
+                "A2": 145,
+                "C1": 1,
+                "B2": 42,
+                "B1": 19
+            },
+            "Class": {
+                "Simple List": 9,
+                "Simple Tuple": 24,
+                "Simple Dictionary": 2,
+                "Simple Atributte": 135,
+                "Simple List Comprehension": 1,
+                "Simple Assignment": 88,
+                "Assigment with sum (total = total +)": 3,
+                "Simplified incremental Assignment with increase amount": 1,
+                "'assert' exception": 42,
+                "Import": 3,
+                "From": 2,
+                "Relative From": 1,
+                "For Loop with Tuple as name": 1,
+                "Simple For Loop": 1,
+                "For Loop with Tuples to iterate": 1,
+                "With": 18,
+                "Function with Simple argument": 10,
+                "Function": 12,
+                "Return": 5
+            }
+        }
+    },
+    "testserver": {
+        "server.py": {
+            "Levels": {
+                "A1": 57,
+                "A2": 73,
+                "C2": 1,
+                "B1": 11,
+                "B2": 1
+            },
+            "Class": {
+                "Simple List": 7,
+                "Simple Tuple": 3,
+                "'range' call function": 1,
+                "Super Function": 1,
+                "Simple Atributte": 66,
+                "Simple Assignment": 20,
+                "Simplified incremental Assignment with increase amount": 1,
+                "'raise' exception": 1,
+                "'pass' statement": 1,
+                "Import": 3,
+                "Simple If statements": 8,
+                "Simple For Loop": 1,
+                "While with Else Loop": 1,
+                "'break' statement": 3,
+                "Exception --> try/finally": 1,
+                "Exception --> try/except": 2,
+                "Function with Simple argument with Default argument": 2,
+                "Function with Simple argument with Default argument with ** argument": 1,
+                "Function with Simple argument with ** argument": 1,
+                "Function with Simple argument": 8,
+                "Return": 10,
+                "Simple Class ": 1
+            }
+        }
+    },
+    "_themes": {
+        "flask_theme_support.py": {
+            "Levels": {
+                "A2": 55,
+                "A1": 3,
+                "B1": 1
+            },
+            "Class": {
+                "Simple Dictionary": 1,
+                "Simple Atributte": 52,
+                "Simple Assignment": 3,
+                "From": 2,
+                "Inherited Class from Style": 1
+            }
+        }
+    },
+    "docs": {
+        "conf.py": {
+            "Levels": {
+                "A1": 50,
+                "A2": 16,
+                "B1": 1
+            },
+            "Class": {
+                "Simple List": 11,
+                "Simple Tuple": 5,
+                "Simple Dictionary": 3,
+                " List Dictionary": 1,
+                "Simple Atributte": 10,
+                "Simple Assignment": 34,
+                "Import": 3
+            }
+        }
+    },
+    "requests": {
+        "cookies.py": {
+            "Levels": {
+                "A1": 175,
+                "B1": 26,
+                "A2": 151,
+                "C2": 3,
+                "B2": 3,
+                "C1": 4
+            },
+            "Class": {
+                "Simple List": 5,
+                "Simple Tuple": 3,
+                " Nested Dictionary": 1,
+                "Simple Dictionary": 4,
+                "Super Function": 3,
+                "Simple Atributte": 135,
+                "Special Class Attribute __dict__": 3,
+                "Simple List Comprehension": 1,
+                "Simple Assignment": 37,
+                "Assigment with sum (total = total +)": 1,
+                "'raise' exception": 7,
+                "Import": 4,
+                "Import with 'as' extension ": 1,
+                "Relative From": 2,
+                "Simple If statements": 33,
+                "Simple For Loop": 14,
+                "For Loop with Tuple as name": 1,
+                "'continue' statement": 3,
+                "Exception --> try/except": 5,
+                "Function with Simple argument": 39,
+                "Function with Simple argument with Default argument": 7,
+                "Function with Simple argument with ** argument": 2,
+                "Function with Simple argument with * argument  with ** argument": 1,
+                "Return": 43,
+                "Generator Function (yield)": 3,
+                "Simple Class ": 2,
+                "Inherited Class from RuntimeError": 1,
+                "Inherited Class from MutableMapping": 1
+            }
+        },
+        "auth.py": {
+            "Levels": {
+                "A1": 135,
+                "A2": 170,
+                "B1": 13,
+                "C1": 1
+            },
+            "Class": {
+                "Simple List": 2,
+                "Simple Tuple": 1,
+                "Simple Dictionary": 1,
+                "Simple Atributte": 153,
+                "Simple Assignment": 67,
+                "Assigment with sum (total = total +)": 1,
+                "Simplified incremental Assignment with increase amount": 10,
+                "'raise' exception": 1,
+                "Import": 5,
+                "Import're' module": 1,
+                "From": 1,
+                "Relative From": 4,
+                "Simple If statements": 29,
+                "Exception --> try/except": 1,
+                "Function with Simple argument": 17,
+                "Function with Simple argument with ** argument": 2,
+                "Lambda": 1,
+                "Return": 18,
+                "Simple Class ": 1,
+                "Inherited Class from AuthBase": 2,
+                "Inherited Class from HTTPBasicAuth": 1
+            }
+        },
+        "sessions.py": {
+            "Levels": {
+                "A1": 204,
+                "A2": 219,
+                "B1": 33,
+                "C1": 6
+            },
+            "Class": {
+                "Simple List": 6,
+                "Simple Tuple": 13,
+                "Simple Dictionary": 9,
+                "Files --> 'read' call function": 1,
+                "If statements expression (else)": 2,
+                "Simple Atributte": 198,
+                "List Comprehension withIf statements": 2,
+                "Simple List Comprehension": 1,
+                "Simple Dictionary Comprehension": 1,
+                "Simple Assignment": 98,
+                "Assigment with sum (total = total +)": 1,
+                "'raise' exception": 3,
+                "'pass' statement": 1,
+                "Import": 3,
+                "From": 2,
+                "Relative From": 11,
+                "Simple If statements": 37,
+                "Simple For Loop": 5,
+                "For Loop with Tuple as name": 3,
+                "While with Else Loop": 1,
+                "Exception --> try/except": 3,
+                "Function with Simple argument with Default argument": 3,
+                "Function": 1,
+                "Function with Simple argument": 14,
+                "Function with Simple argument with Default argument with ** argument": 4,
+                "Function with Simple argument with * argument ": 1,
+                "Function with Simple argument with ** argument": 5,
+                "Return": 29,
+                "Generator Function (yield)": 2,
+                "Simple Class ": 1,
+                "Inherited Class from SessionRedirectMixin": 1
+            }
+        },
+        "hooks.py": {
+            "Levels": {
+                "A1": 16,
+                "A2": 2,
+                "C1": 1,
+                "B1": 1
+            },
+            "Class": {
+                "Simple List": 3,
+                "Simple Dictionary": 1,
+                "Simple Atributte": 1,
+                "Simple Dictionary Comprehension": 1,
+                "Simple Assignment": 6,
+                "Simple If statements": 3,
+                "Simple For Loop": 1,
+                "Function": 1,
+                "Function with Simple argument with ** argument": 1,
+                "Return": 2
+            }
+        },
+        "compat.py": {
+            "Levels": {
+                "A1": 15,
+                "A2": 12,
+                "B1": 5
+            },
+            "Class": {
+                "Simple Tuple": 3,
+                "Simple Atributte": 1,
+                "Simple Assignment": 11,
+                "Import": 3,
+                "Import with 'as' extension ": 2,
+                "From": 8,
+                "From with 'as' extension ": 1,
+                "Simple If statements": 1,
+                "Exception --> try/except": 2
+            }
+        },
+        "models.py": {
+            "Levels": {
+                "A1": 348,
+                "A2": 261,
+                "B1": 72,
+                "B2": 2,
+                "C1": 5
+            },
+            "Class": {
+                "Simple List": 12,
+                "Simple Tuple": 26,
+                "Simple Dictionary": 7,
+                "Files --> 'read' call function": 2,
+                "If statements expression (else)": 12,
+                "Simple Atributte": 230,
+                "Special Class Attribute __dict__": 2,
+                "Generator Expression": 1,
+                "Simple Dictionary Comprehension": 1,
+                "Simple Assignment": 155,
+                "Assigment with sum (total = total +)": 2,
+                "Simplified incremental Assignment with increase amount": 3,
+                "'raise' exception": 21,
+                "'pass' statement": 1,
+                "Import": 3,
+                "From": 5,
+                "Relative From": 12,
+                "Relative From with 'as' extension ": 3,
+                "Simple If statements": 77,
+                "For Loop with Tuple as name": 5,
+                "Simple For Loop": 7,
+                "While with Else Loop": 1,
+                "'break' statement": 1,
+                "'continue' statement": 1,
+                "Exception --> try/except": 13,
+                "Function with Simple argument": 35,
+                "Function with Simple argument with Default argument": 6,
+                "Function with Simple argument with * argument ": 1,
+                "Function with Simple argument with ** argument": 1,
+                "Function": 1,
+                "Return": 33,
+                "Generator Function (yield)": 3,
+                "Simple Class ": 3,
+                "Inherited Class from RequestHooksMixin": 2
+            }
+        },
+        "certs.py": {
+            "Levels": {
+                "A1": 1,
+                "A2": 1,
+                "B2": 1
+            },
+            "Class": {
+                "Print": 1,
+                "From": 1,
+                "If statements using \u2192 __name__ == \u2018__main__\u2019": 1
+            }
+        },
+        "__init__.py": {
+            "Levels": {
+                "A1": 38,
+                "C2": 1,
+                "A2": 23,
+                "B1": 19,
+                "B2": 6
+            },
+            "Class": {
+                "Simple List": 2,
+                "Simple Tuple": 16,
+                "'map' call function": 1,
+                "Simple Atributte": 16,
+                "Simple Assignment": 12,
+                "'raise' exception": 1,
+                "'assert' exception": 6,
+                "'pass' statement": 1,
+                "Import": 4,
+                "Relative From": 8,
+                "From": 3,
+                "From with 'as' extension ": 3,
+                "Simple If statements": 5,
+                "Exception --> try/except": 5,
+                "Exception --> try/try/except": 1,
+                "Function with Simple argument": 2,
+                "Return": 1
+            }
+        },
+        "status_codes.py": {
+            "Levels": {
+                "A1": 80,
+                "A2": 7,
+                "B1": 2,
+                "C1": 2
+            },
+            "Class": {
+                "Simple Tuple": 71,
+                "Simple Dictionary": 1,
+                "If statements expression (else)": 1,
+                "Simple Atributte": 5,
+                "Generator Expression": 2,
+                "Simple Assignment": 4,
+                "Relative From": 1,
+                "Simple If statements": 1,
+                "For Loop with Tuple as name": 1,
+                "Simple For Loop": 1,
+                "Function": 1,
+                "Function with Simple argument": 1,
+                "Return": 1
+            }
+        },
+        "packages.py": {
+            "Levels": {
+                "A1": 10,
+                "A2": 15,
+                "B1": 2
+            },
+            "Class": {
+                "Simple Tuple": 1,
+                "Simple Atributte": 11,
+                "Simple Assignment": 5,
+                "Import": 3,
+                "Import with 'as' extension ": 1,
+                "Simple If statements": 2,
+                "For Loop with Tuples to iterate": 1,
+                "Simple For Loop": 2,
+                "Exception --> try/except": 1
+            }
+        },
+        "__version__.py": {
+            "Levels": {
+                "A1": 10
+            },
+            "Class": {
+                "Simple Assignment": 10
+            }
+        },
+        "api.py": {
+            "Levels": {
+                "A2": 3,
+                "B1": 10,
+                "A1": 8
+            },
+            "Class": {
+                "Simple Atributte": 3,
+                "Relative From": 1,
+                "With": 1,
+                "Function with Simple argument with ** argument": 4,
+                "Function with Simple argument with Default argument with ** argument": 4,
+                "Return": 8
+            }
+        },
+        "_internal_utils.py": {
+            "Levels": {
+                "A1": 14,
+                "A2": 8,
+                "B2": 1,
+                "C1": 1,
+                "B1": 2
+            },
+            "Class": {
+                "Simple Tuple": 2,
+                "Simple Dictionary": 1,
+                "Simple Atributte": 6,
+                "Simple Assignment": 7,
+                "'assert' exception": 1,
+                "Import're' module": 1,
+                "Relative From": 1,
+                "Simple If statements": 1,
+                "Exception --> try/except": 1,
+                "Function with Simple argument with Default argument": 1,
+                "Function with Simple argument": 1,
+                "Return": 3
+            }
+        },
+        "utils.py": {
+            "Levels": {
+                "A1": 405,
+                "A2": 216,
+                "B1": 53,
+                "C1": 9,
+                "B2": 1
+            },
+            "Class": {
+                "Simple List": 6,
+                "Simple Tuple": 39,
+                "Simple Dictionary": 9,
+                "'range' call function": 1,
+                "Files --> 'write' call function": 1,
+                "Files --> 'read' call function": 1,
+                "If statements expression (else)": 2,
+                "Simple Atributte": 183,
+                "Generator Expression": 2,
+                "Simple Assignment": 137,
+                "Assigment with sum (total = total +)": 5,
+                "Simplified incremental Assignment with increase amount": 2,
+                "'raise' exception": 9,
+                "'pass' statement": 2,
+                "Import": 10,
+                "Import're' module": 1,
+                "Import'struct' module": 1,
+                "From": 3,
+                "Relative From": 8,
+                "Relative From with 'as' extension ": 1,
+                "Simple If statements": 89,
+                "Simple For Loop": 13,
+                " Nested For Loop": 1,
+                "While with Else Loop": 2,
+                "'break' statement": 4,
+                "'continue' statement": 1,
+                "Exception --> try/try/except": 1,
+                "Exception --> try/except": 18,
+                "Exception --> try/finally": 1,
+                "Exception --> try/except/else": 2,
+                "With": 3,
+                "Function with Simple argument": 37,
+                "Function with Simple argument with Default argument": 5,
+                "Function": 1,
+                "Return": 78,
+                "Generator Function (yield)": 5
+            }
+        },
+        "exceptions.py": {
+            "Levels": {
+                "C2": 1,
+                "A2": 12,
+                "A1": 5,
+                "B1": 29
+            },
+            "Class": {
+                "Super Function": 1,
+                "Simple Atributte": 12,
+                "Simple Assignment": 4,
+                "From with 'as' extension ": 1,
+                "Relative From with 'as' extension ": 1,
+                "Simple If statements": 1,
+                "Function with Simple argument with * argument  with ** argument": 2,
+                "Inherited Class from IOError": 1,
+                "Inherited Class from RequestException": 9,
+                "Inherited Class from CompatJSONDecodeError": 1,
+                "Inherited Class from ConnectionError": 2,
+                "Inherited Class from Timeout": 2,
+                "Inherited Class from ValueError": 4,
+                "Inherited Class from InvalidURL": 1,
+                "Inherited Class from BaseHTTPError": 1,
+                "Inherited Class from TypeError": 1,
+                "Inherited Class from Warning": 1,
+                "Inherited Class from DeprecationWarning": 1,
+                "Inherited Class from RequestsWarning": 1
+            }
+        },
+        "structures.py": {
+            "Levels": {
+                "A1": 33,
+                "A2": 27,
+                "C2": 1,
+                "B2": 2,
+                "C1": 2,
+                "B1": 4
+            },
+            "Class": {
+                "Simple Tuple": 4,
+                "Simple Dictionary": 1,
+                "Super Function": 1,
+                "Simple Atributte": 23,
+                "Special Class Attribute __dict__": 2,
+                "Generator Expression": 2,
+                "Simple Assignment": 5,
+                "From": 1,
+                "Relative From": 1,
+                "Simple If statements": 2,
+                "Function with Simple argument with Default argument with ** argument": 1,
+                "Function with Simple argument": 11,
+                "Function with Simple argument with Default argument": 2,
+                "Return": 11,
+                "Inherited Class from MutableMapping": 1,
+                "Inherited Class from dict": 1
+            }
+        },
+        "help.py": {
+            "Levels": {
+                "A1": 41,
+                "A2": 51,
+                "B1": 7,
+                "B2": 1
+            },
+            "Class": {
+                "Simple List": 1,
+                "Simple Dictionary": 14,
+                " Nested Dictionary": 1,
+                "Print": 1,
+                "If statements expression (else)": 1,
+                "Simple Atributte": 26,
+                "Simple Assignment": 26,
+                "Import": 10,
+                "Relative From with 'as' extension ": 1,
+                "From": 1,
+                "If statements using \u2192 __name__ == \u2018__main__\u2019": 1,
+                "Simple If statements": 8,
+                "Exception --> try/except": 3,
+                "Exception --> try/except/else": 1,
+                "Function": 3,
+                "Return": 2
+            }
+        },
+        "adapters.py": {
+            "Levels": {
+                "A1": 133,
+                "A2": 158,
+                "C2": 2,
+                "C1": 1,
+                "B1": 47
+            },
+            "Class": {
+                "Simple List": 1,
+                "Simple Tuple": 7,
+                "Simple Dictionary": 6,
+                "Super Function": 2,
+                "Simple Atributte": 136,
+                "Simple Dictionary Comprehension": 1,
+                "Simple Assignment": 77,
+                "'raise' exception": 22,
+                "'pass' statement": 2,
+                "Import": 2,
+                "From": 8,
+                "From with 'as' extension ": 5,
+                "Relative From": 7,
+                "Simple If statements": 30,
+                "For Loop with Tuple as name": 2,
+                "Simple For Loop": 2,
+                "Exception --> try/except": 5,
+                "Function with Simple argument": 9,
+                "Function with Simple argument with Default argument": 4,
+                "Function with Simple argument with Default argument with ** argument": 1,
+                "Function with Simple argument with ** argument": 2,
+                "Function with * argument  with ** argument": 1,
+                "Return": 7,
+                "Simple Class ": 1,
+                "Inherited Class from BaseAdapter": 1
+            }
+        },
+        "setup.py": {
+            "Levels": {
+                "A1": 33,
+                "A2": 41,
+                "B1": 7
+            },
+            "Class": {
+                "Simple List": 12,
+                "Simple Tuple": 3,
+                "Simple Dictionary": 4,
+                " List Dictionary": 2,
+                "Files --> 'write' call function": 1,
+                "Files --> 'open' call function": 2,
+                "Files --> 'read' call function": 2,
+                "Simple Atributte": 26,
+                "Simple Assignment": 13,
+                "Import": 3,
+                "From": 3,
+                "From with 'as' extension ": 1,
+                "Simple If statements": 2,
+                "Exception --> try/except": 1,
+                "With": 2,
+                "Function with Simple argument": 3,
+                "Inherited Class from TestCommand": 1
+            }
+        }
+    }
+}
