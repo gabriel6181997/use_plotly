@@ -3,13 +3,13 @@ import pandas as pd
 import json
 
 # Define the directory path containing the JSON files
-directory_path = "repo_data_json_files"
+directory_path = "total_data_json_files"
 
 # Initialize an empty DataFrame to store the combined data
 combined_df = pd.DataFrame(columns=["Version", "Level", "Count"])
 
 # List all JSON files in the directory
-json_files = [file for file in os.listdir(directory_path) if file.startswith("repo_data")]
+json_files = [file for file in os.listdir(directory_path) if file.startswith("total_data")]
 
 # Loop through each JSON file and combine the data
 for json_file in json_files:
@@ -22,7 +22,7 @@ for json_file in json_files:
         json_data = json.load(f)
 
     # Extract the data from the "Levels" section of "tests"
-    levels_data = json_data["tests"]["Levels"]
+    levels_data = json_data["requests"]["sessions.py"]["Levels"]
 
     # Create a DataFrame for the current JSON file
     df = pd.DataFrame(levels_data.items(), columns=["Level", "Count"])
