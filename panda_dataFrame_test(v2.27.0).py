@@ -10,11 +10,11 @@ import pandas as pd
 import json
 
 # Read JSON data from a file
-with open("repo_data_json_files/repo_data(v2.27.0).json") as f:
+with open("total_data_json_files/total_data(v2.27.0).json") as f:
     json_data = json.load(f)
 
 # Extract the data from the "Levels" section of "tests"
-levels_data = json_data["tests"]["Levels"]
+levels_data = json_data["requests"]["sessions.py"]["Levels"]
 
 # Create a DataFrame with "Version," "Level," and "Count" columns
 df = pd.DataFrame(levels_data.items(), columns=["Level", "Count"])
