@@ -3,7 +3,7 @@ import pandas as pd
 import json
 
 # Define the directory path containing the JSON files
-directory_path = "data_json_files"
+directory_path = "repo_data_json_files"
 
 # Initialize an empty DataFrame to store the combined data
 combined_df = pd.DataFrame(columns=["Version", "Level", "Count"])
