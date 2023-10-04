@@ -35,6 +35,7 @@ for json_file in json_files:
 # Sort the combined DataFrame by "Version" and "Class"
 combined_df = combined_df.sort_values(by=["Version", "Class"])
 
+# Plot the data in a scatter graph
 fig = px.scatter(combined_df, x="Version", y="Count", color="Class", title="Change in class across different versions of sessions.py")
 fig.show()
 

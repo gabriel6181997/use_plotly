@@ -35,6 +35,7 @@ for json_file in json_files:
 # Sort the combined DataFrame by "Version" and "Level"
 combined_df = combined_df.sort_values(by=["Version", "Level"])
 
+# Plot the data in a scatter graph
 fig = px.scatter(combined_df, x="Version", y="Count", color="Level", title="Change in code competency levels across different versions of sessions.py")
 fig.show()
 
