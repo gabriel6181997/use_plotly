@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import json
+import plotly.express as px
 
 # Define the directory path containing the JSON files
 directory_path = "total_data_json_files"
@@ -17,7 +18,7 @@ for json_file in json_files:
     # Construct the full file path
     file_path = os.path.join(directory_path, json_file)
 
-    # Reading JSON data from the file
+    # Read JSON data from the file
     with open(file_path) as f:
         json_data = json.load(f)
 
@@ -31,5 +32,11 @@ for json_file in json_files:
     # Append the current DataFrame to the combined DataFrame
     combined_df = combined_df.append(df, ignore_index=True)
 
-# Writing the combined DataFrame to a single CSV file
+# Sort the combined DataFrame by "Version" and "Level"
+combined_df = combined_df.sort_values(by=["Version", "Level"])
+
+fig = px.scatter(combined_df, x="Version", y="Count", color="Level", title="Change in code competency levels across different versions of sessions.py")
+fig.show()
+
+# Write the combined DataFrame to a single CSV file
 combined_df.to_csv("output.csv", index=False)
