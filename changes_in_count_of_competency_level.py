@@ -1,40 +1,60 @@
-import pandas as pd
 import plotly.express as px
+import os
+import pandas as pd
+import json
 
-data = [
-    ["sessions.py", "v2.27.0", "A1", 206],
-    ["sessions.py", "v2.27.1", "A1", 206],
-    ["sessions.py", "v2.28.0", "A1", 204],
-    ["sessions.py", "v2.27.0", "A2", 222],
-    ["sessions.py", "v2.27.1", "A2", 222],
-    ["sessions.py", "v2.28.0", "A2", 219],
-    ["sessions.py", "v2.27.0", "C1", 6],
-    ["sessions.py", "v2.27.1", "C1", 6],
-    ["sessions.py", "v2.28.0", "C1", 6],
-    ["compat.py", "v2.27.0", "A1", 15],
-    ["compat.py", "v2.27.1", "A1", 13],
-    ["compat.py", "v2.28.0", "A1", 14],
-    ["compat.py", "v2.27.0", "A2", 13],
-    ["compat.py", "v2.27.1", "A2", 15],
-    ["compat.py", "v2.28.0", "A2", 17],
-    ["compat.py", "v2.27.0", "C1", 3],
-    ["compat.py", "v2.27.1", "C1", 3],
-    ["compat.py", "v2.28.0", "C1", 3],
-]
+# Define the directory path containing the JSON files
+directory_path = "total_data_json_files"
 
-df = pd.DataFrame(data, columns=["File name", "Version", "Level", "Count"])
+# Initialize an empty list to store the data
+data = []
+
+# List all JSON files in the directory
+json_files = [file for file in os.listdir(directory_path) if file.endswith(".json")]
+
+# Loop through each JSON file and extract the data
+for json_file in json_files:
+    # Extract version number from the filename
+    version = json_file[11:-6]
+
+    # Construct the full file path
+    file_path = os.path.join(directory_path, json_file)
+
+    # Read JSON data from the file
+    with open(file_path) as f:
+        json_data = json.load(f)
+
+    # Loop through the JSON data to extract the required information
+    for category, category_data in json_data.items():
+        for module, module_data in category_data.items():
+            if "Levels" in module_data:
+                levels_data = module_data["Levels"]
+                for level, count in levels_data.items():
+                    file_name_category = f"{module} ({category})"
+                    data.append([file_name_category, version, level, count])
+
+# Create a DataFrame from the collected data
+df = pd.DataFrame(data, columns=["File name (category)", "Version", "Level", "Count"])
+
+# Sort the DataFrame by "File name (category)," "Version," and "Level"
+df = df.sort_values(by=["File name (category)", "Version", "Level"])
+
+# Print the DataFrame (optional)
+print(df)
+
+# Save the DataFrame to a CSV file (optional)
+df.to_csv("output.csv", index=False)
 
 # Filter only the levels where changes occur
-changed_levels = df.groupby(["File name", "Level"])["Count"].nunique().reset_index()
+changed_levels = df.groupby(["File name (category)", "Level"])["Count"].nunique().reset_index()
 changed_levels = changed_levels[changed_levels["Count"] > 1]
 
 # Merge the filtered levels with the original data
-filtered_df = pd.merge(df, changed_levels[["File name", "Level"]], on=["File name", "Level"])
+filtered_df = pd.merge(df, changed_levels[["File name (category)", "Level"]], on=["File name (category)", "Level"])
 
 # Create a scatter plot with different symbols for each level
-fig = px.scatter(filtered_df, x="Version", y="File name", size="Count", color="Level", symbol="Level",
-                 title="Count of Levels with Changes",
-                 labels={"Count": "Count of Changes"},
+fig = px.scatter(filtered_df, x="Version", y="File name (category)", size="Count", color="Level", symbol="Level",
+                 title="Change in Code Competency Level of Multiple Python Files across Different Versions",
                  symbol_sequence=["circle", "square", "diamond", "cross", "x"])
 
 fig.show()
