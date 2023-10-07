@@ -1,3 +1,9 @@
+# Don't use the run button in VS Code. Use the following command to run this script in the terminal:
+# python -u "/Users/gabriel6181997/use_plotly/changes_in_count_of_competency_level(separate versions).py"
+
+# Use the following code to debug this script:
+# import pdb;pdb.set_trace()
+
 import plotly.express as px
 import os
 import pandas as pd
@@ -26,9 +32,14 @@ for json_file in json_files:
 
     # Loop through the JSON data to extract the required information
     for category, category_data in json_data.items():
+        # examples of category = "tests", "testserver", "themes"
+        # examples of category_data = "test_utils.py" and the data inside it
         for module, module_data in category_data.items():
+            # examples of module = 'test_utils.py'
+            # examples of module_data = "Levels","Class" and the data inside them
             if "Levels" in module_data:
                 levels_data = module_data["Levels"]
+                # examples of levels_data = {'A1': 277, 'B1': 35, 'A2': 243, 'C1': 1, 'B2': 65}
                 for level, count in levels_data.items():
                     file_name_category = f"{module} ({category})"
                     data.append([file_name_category, version, level, count])
@@ -43,27 +54,27 @@ df = df.sort_values(by=["File name (category)", "Version", "Level"])
 output_dir = "output_levels"
 os.makedirs(output_dir, exist_ok=True)
 
-# Create separate CSV files and scatter plots for each level with count changes
-for level in df["Level"].unique():
+# Create separate CSV files and scatter plots for each level
+for level in sorted(df["Level"].unique()):
     level_df = df[df["Level"] == level]
-    level_df_grouped = level_df.groupby(["File name (category)", "Level"])["Count"].nunique().reset_index()
+    version_df_grouped = level_df.sort_values(by=["File name (category)", "Version"])
 
-    # Filter levels with count changes
-    changed_levels = level_df_grouped[level_df_grouped["Count"] > 1]
+    # Save the CSV file (Optional)
+    # version_df_grouped.to_csv(os.path.join(output_dir, f"{level}_output_version_df_grouped.csv"), index=False)
 
-    if not changed_levels.empty:
-        level_df = level_df[level_df["Level"].isin(changed_levels["Level"])]
+    # Load the data
+    df = pd.read_csv(os.path.join(output_dir, f"{level}_output_version_df_grouped.csv"))
 
-        # Sort the level DataFrame by "Version" in ascending order
-        level_df = level_df.sort_values(by=["File name (category)", "Version"])
+    # Filter the data to include only those files with count changes
+    filtered_df = df.groupby('File name (category)').filter(lambda x: x['Count'].nunique() > 1)
 
-        # Check if the size of plots changes across different versions
-        if len(level_df["Count"].unique()) > 1:
-            # Save the CSV file for the current level
-            level_df.to_csv(os.path.join(output_dir, f"output_{level}.csv"), index=False)
+    # Generate the plot
+    fig = px.line(filtered_df, x="Version", y="Count", color="File name (category)",
+                     title=f"Change in Code Competency Level {level} of Python Files across Different Versions")
 
-            # Create a scatter plot for the current level
-            fig = px.scatter(level_df, x="Version", y="File name (category)", size="Count",
-                             title=f"Change in Code Competency Level {level} of Python Files across Different Versions")
+    # Change the y-axis to a log scale to better visualize the changes
+    fig.update_layout(yaxis_type="log")
 
-            fig.show()
+    # Show the graphs in a browser
+    fig.show()
+
