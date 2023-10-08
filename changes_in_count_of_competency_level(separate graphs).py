@@ -1,5 +1,5 @@
 # Don't use the run button in VS Code. Use the following command to run this script in the terminal:
-# python -u "/Users/gabriel6181997/use_plotly/changes_in_count_of_competency_level(separate versions).py"
+# python -u "/Users/gabriel6181997/use_plotly/changes_in_count_of_competency_level(separate graphs).py"
 
 # Use the following code to debug this script:
 # import pdb;pdb.set_trace()
