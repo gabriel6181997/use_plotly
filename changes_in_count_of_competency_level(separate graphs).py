@@ -54,6 +54,11 @@ df = df.sort_values(by=["File name (category)", "Version", "Level"])
 output_dir = "output_levels"
 os.makedirs(output_dir, exist_ok=True)
 
+# Create a color map for "File name (category)"
+unique_files = df["File name (category)"].unique()
+color_scale = px.colors.qualitative.Set1
+color_map = {file: color_scale[i % len(color_scale)] for i, file in enumerate(unique_files)}
+
 # Create separate CSV files and scatter plots for each level
 for level in sorted(df["Level"].unique()):
     level_df = df[df["Level"] == level]
@@ -70,7 +75,8 @@ for level in sorted(df["Level"].unique()):
 
     # Generate the plot
     fig = px.line(filtered_df, x="Version", y="Count", color="File name (category)",
-                     title=f"Change in Code Competency Level {level} of Python Files across Different Versions")
+                     title=f"Change in Code Competency Level {level} of Python Files across Different Versions",
+                     color_discrete_map=color_map)
 
     # Change the y-axis to a log scale to better visualize the changes
     fig.update_layout(yaxis_type="log")
